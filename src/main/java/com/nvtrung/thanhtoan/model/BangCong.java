@@ -5,13 +5,13 @@ import java.util.ArrayList;
 public class BangCong {
     private int id;
     private String tongluong, tonggio, ngaythanhtoan, thue, thucnhan, trangthai;
-    private Integer tblQuanLytblNhanVienid;
-    private Integer BacSitblNhanVienid;
+    private BacSi bacSi;
+    private QuanLy quanly;
 
     public BangCong() {
     }
 
-    public BangCong(int id, String tongluong, String tonggio, String ngaythanhtoan, String thue, String thucnhan, String trangthai, Integer tblQuanLytblNhanVienid, Integer bacSitblNhanVienid) {
+    public BangCong(int id, String tongluong, String tonggio, String ngaythanhtoan, String thue, String thucnhan, String trangthai, BacSi bacsi, QuanLy quanly) {
         this.id = id;
         this.tongluong = tongluong;
         this.tonggio = tonggio;
@@ -19,8 +19,8 @@ public class BangCong {
         this.thue = thue;
         this.thucnhan = thucnhan;
         this.trangthai = trangthai;
-        this.tblQuanLytblNhanVienid = tblQuanLytblNhanVienid;
-        this.BacSitblNhanVienid = bacSitblNhanVienid;
+        this.bacSi = bacsi;
+        this.quanly = quanly;
     }
 
     public int getId() {
@@ -79,20 +79,19 @@ public class BangCong {
         this.trangthai = trangthai;
     }
 
-
-    public Integer getTblQuanLytblNhanVienid() {
-        return tblQuanLytblNhanVienid;
+    public BacSi getBacSi() {
+        return bacSi;
     }
 
-    public void setTblQuanLytblNhanVienid(Integer tblQuanLytblNhanVienid) {
-        this.tblQuanLytblNhanVienid = tblQuanLytblNhanVienid;
+    public void setBacSi(BacSi bacSi) {
+        this.bacSi = bacSi;
     }
 
-    public Integer getBacSitblNhanVienid() {
-        return BacSitblNhanVienid;
+    public QuanLy getQuanly() {
+        return quanly;
     }
 
-    public void setBacSitblNhanVienid(Integer bacSitblNhanVienid) {
-        BacSitblNhanVienid = bacSitblNhanVienid;
+    public void setQuanly(QuanLy quanly) {
+        this.quanly = quanly;
     }
 }

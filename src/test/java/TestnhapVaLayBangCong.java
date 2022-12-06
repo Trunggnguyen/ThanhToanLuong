@@ -23,7 +23,6 @@ public class TestnhapVaLayBangCong {
         BangCong bangCong = new BangCong();
         bangCong.setTonggio("tonggio");
         bangCong.setTongluong("tongluong");
-        bangCong.setBacSitblNhanVienid(Integer.valueOf("1"));
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         Date date = new Date();
         bangCong.setNgaythanhtoan(String.valueOf(dateFormat.format(date)));
