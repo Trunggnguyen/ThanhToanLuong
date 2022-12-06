@@ -24,7 +24,7 @@ public class CongDAO extends  DAO{
                         result.getString("calam"),
                         result.getString("giolam"),
                         result.getString("dongia"),
-                        result.getInt("tblBangCongId")));
+                        null));
             }
         } catch (SQLException e) {
             e.printStackTrace();

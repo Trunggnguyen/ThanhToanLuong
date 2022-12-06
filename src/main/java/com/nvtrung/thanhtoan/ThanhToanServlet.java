@@ -31,7 +31,6 @@ public class ThanhToanServlet extends HttpServlet {
             BangCong bangCong = new BangCong();
             bangCong.setTonggio(request.getParameter("tonggio"));
             bangCong.setTongluong(request.getParameter("tongluong"));
-            bangCong.setBacSitblNhanVienid(Integer.valueOf(request.getParameter("BacSitblNhanVienid")));
 
             DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
             Date date = new Date();

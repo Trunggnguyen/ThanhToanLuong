@@ -9,6 +9,13 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class BangCongDAO extends  DAO {
+
+    private BacSiDAO bacSiDAO;
+    public BangCongDAO() {
+        super();
+        bacSiDAO = new BacSiDAO();
+
+    }
     public int tongCaLam(int idBangCong) {
         String sql = "SELECT count(*) as cnt FROM tblcong WHERE tblBangCongid = ?";
         System.out.println("id bang cong:" + idBangCong);
@@ -39,8 +46,8 @@ public class BangCongDAO extends  DAO {
                         result.getString("thue"),
                         result.getString("thucnhan"),
                         result.getString("trangthai"),
-                        result.getInt("BacSitblNhanVienid"),
-                        result.getInt("tblQuanLytblNhanVienid"));
+                        bacSiDAO.getBacSiByID(result.getInt("BacSitblNhanVienid")),
+                        null);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -57,8 +64,11 @@ public class BangCongDAO extends  DAO {
         statement.setString(4, bangCong.getThue());
         statement.setString(5, bangCong.getThucnhan());
         statement.setString(6, bangCong.getTrangthai());
-        statement.setInt(7, bangCong.getBacSitblNhanVienid());
-        statement.setInt(8, bangCong.getBacSitblNhanVienid());
+        //statement.setInt(7, bangCong.getQuanly().getId());
+       // statement.setInt(8, bangCong.getBacSi().getId());
+
+        statement.setInt(7, 1);
+         statement.setInt(8, 1);
         System.out.println("tong luong: " + bangCong.getTongluong());
 
         int rowsInserted = statement.executeUpdate();

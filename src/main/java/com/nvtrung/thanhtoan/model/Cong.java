@@ -6,16 +6,18 @@ public class Cong {
 
     private BacSi bacsi;
     private  QuanLy quanly;
-    private Integer bangCongId;
+    private  BangCong bangCong ;
 
-    public Cong(int id, String ngaylam, String calam, String giolam, String dongia, Integer bangCongId) {
+
+    public Cong(int id, String ngaylam, String calam, String giolam, String dongia, BangCong bangCong) {
         this.id = id;
         this.ngaylam = ngaylam;
         this.calam = calam;
         this.giolam = giolam;
         this.dongia = dongia;
-        this.bangCongId = bangCongId;
+        this.bangCong = bangCong;
     }
+
 
     public Cong() {
     }
